@@ -77,3 +77,18 @@ npm i --save @nestjs/config
 ```
 
 https://docs.nestjs.com/techniques/configuration
+
+## Para trabajarcon microservicios con una capa de transporte
+
+```
+npm i --save @nestjs/microservices
+```
+
+https://docs.nestjs.com/microservices/basics
+
+## RabbitMQ
+```
+npm i --save amqplib amqp-connection-manager
+
+```
+https://docs.nestjs.com/microservices/rabbitmq

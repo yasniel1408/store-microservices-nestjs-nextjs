@@ -19,6 +19,7 @@ import {
 import { CreateUserDto } from './dto/create-user.dto';
 import { ResponseUsersDto } from './dto/response-user.dto';
 import { UpdateUsersDto } from './dto/update-user.dto';
+import { EventPattern } from '@nestjs/microservices';
 
 @ApiTags('Users')
 @ApiBearerAuth()
@@ -61,5 +62,11 @@ export class UsersController {
   @HttpCode(HttpStatus.OK)
   remove(@Param('id') id: string): Promise<ResponseUsersDto> {
     return this.usersService.remove(+id);
+  }
+
+  // Ejemplo de como recibir un evento
+  @EventPattern('ProductCreated')
+  productCreatedByEvent(data) {
+    console.log(data);
   }
 }

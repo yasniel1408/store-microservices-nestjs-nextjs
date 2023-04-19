@@ -13,7 +13,7 @@ import { JwtAuthGuard, JwtStrategy } from '@store-microservice-nestjs/common';
     PassportModule,
     JwtModule.register({
       secret: process.env.JWT_SECRET,
-      signOptions: { expiresIn: '60s' },
+      signOptions: { expiresIn: process.env.TIME_EXPIRATION_JWT },
     }),
   ],
   providers: [
