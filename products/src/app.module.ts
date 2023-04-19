@@ -2,7 +2,6 @@ import { MiddlewareConsumer, Module, RequestMethod } from '@nestjs/common';
 import { ProductsModule } from './products/products.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LoggerMiddleware } from '@store-microservice-nestjs/common';
-import { MyController } from './my-service.service';
 
 @Module({
   imports: [
@@ -23,7 +22,7 @@ import { MyController } from './my-service.service';
     }),
     ProductsModule,
   ],
-  controllers: [MyController],
+  controllers: [],
   providers: [],
 })
 export class AppModule {
